@@ -1,0 +1,118 @@
+board:
+  buy_url_cn: N/A
+  buy_url_global: N/A
+  debug_interface: SWD
+  debugger: J-Link
+  description_en: The CPK-RA2L1 MCU evaluation board, developed based on Renesas RA2L1
+    MCU, can help users easily evaluate the characteristics of RA2L1 MCU group through
+    flexible configuration software package and IDE, and develop embedded system applications.
+  description_zh: 基于瑞萨 RA2L1 MCU 开发的 CPK-RA2L1 MCU 评估板，通过灵活配置软件包和 IDE，可帮助用户对 RA2L1
+    MCU 群组的特性轻松进行评估，并对嵌入系统应用程序进行开发。
+  emulator_machine: ''
+  large_image: documents/images/ra2l1-cpk.jpg
+  name: CPK-RA2L1
+  price_cn: N/A CNY
+  price_global: N/A USD
+  sale_contact_cn: N/A
+  sale_contact_global: N/A
+  small_image: documents/images/ra2l1-cpk - 副本.jpg
+  vendor: RENESAS
+  version: 1.0.0
+chip:
+  chip_name: R7FA2L1AB2DFM
+  clock_source: HSE
+  device_vendor: RENESAS
+  family_name: RA
+  rx_name: PA10
+  series_name: RA6
+  source_freq: '8000000'
+  sub_series_name: RA2L1
+  target_freq: '240000000'
+  tx_name: PA9
+  uart_name: UART1
+docs:
+- category: sheet
+  file: documents/RA2L1_datasheet.pdf
+  title: RA2L1_datasheet
+- category: other
+  file: documents/RA2L1_Group_User’s_Manual_Hardware.pdf
+  title: RA2L1_Group_User’s_Manual_Hardware
+example_projects: []
+features:
+- 48MHz Arm® Cortex®-M23
+- 128KB/ 256KB code flash and 32KB SRAM
+- Seggerj-link ® on-board (OB) interface for debugging and programming. A 10-pin JTAG/SWD
+  interface is provided for connecting optional external debuggers and programmers.
+- Two PMOD connectors, allowing rapid prototyping using appropriate PMOd-compatible
+  peripheral plug-in modules
+features_zh:
+- 48MHz Arm® Cortex®-M23 内核
+- 128KB/ 256KB 代码闪存和 32KB SRAM（支持 ECC）
+- 8KB 数据闪存，提供与 EEPROM 类似的数据存储功能
+- 从 48 引脚到到 100 引脚的封装选择
+- 增强型电容式触摸感应单元 (CTSU2)
+- SEGGERJ-Link®板上（OB）接口，用于调试和编程。提供了 10 引脚 JTAG / SWD 接口，用于连接可选 的外部调试器和编程器。
+- 两个 PMOD 连接器，允许使用适当的 PMOD 兼容外围插件模块进行快速原型开发
+
+pkg_type: Board_Support_Packages
+pkg_vendor: RT-Thread
+pkg_version: 1.0.0
+template_projects:
+- builtin_files:
+  - files_and_folders:
+    - .config
+    - .cproject
+    - .gitignore
+    - .ignore_format.yml
+    - .project
+    - .settings
+    - board
+    - buildinfo.gpdsc
+    - cconfig.h
+    - configuration.xml
+    - docs
+    - Kconfig
+    - makefile.targets
+    - project.uvoptx
+    - project.uvprojx
+    - QE-Touch
+    - R7FA2L1AB2DFM.pincfg
+    - ra
+    - ra_cfg
+    - ra_gen
+    - README.md
+    - rt-thread
+    - rtconfig.h
+    - rtconfig.py
+    - rtconfig_preinc.h
+    - SConscript
+    - SConstruct
+    - script
+    - src
+    - template.uvoptx
+    - template.uvprojx
+    source_path_offset: project_0
+    target_path_offset: ''
+  - files_and_folders:
+    - libraries
+    source_path_offset: ''
+    target_path_offset: ''
+  external_files: 
+  - package_name: GNU_Tools_for_ARM_Embedded_Processors
+    package_type: ToolChain_Support_Packages
+    package_vendor: 'ARM'
+    package_version: 10.2.1
+    source_path_offset: '.'
+    target_path_offset: '.'
+    files_and_folders: []
+  - package_name: J-Link
+    package_type: Debugger_Support_Packages
+    package_vendor: 'SEGGER'
+    package_version: v7.50a
+    source_path_offset: '.'
+    target_path_offset: '.'
+    files_and_folders: []
+  project_description: ''
+  project_name: project_0
+  project_type: rt-thread|@full|@latest
+yaml_version: 3
